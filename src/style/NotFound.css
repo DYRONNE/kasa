@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 20rem;
+  color: #FF6060;
+  font-family: "Montserrat", sans-serif;
+  margin: 10rem;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+.not-found-link {
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.not-found-link-a {
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* Media Query pour les écrans de moins de 800px */
+@media (max-width: 800px) {
+  .not-found-title {
+    font-size: 10rem;
+  }
+  .not-found-text {
+    font-size: 0.75rem;
+  }
+}/*# sourceMappingURL=NotFound.css.map */

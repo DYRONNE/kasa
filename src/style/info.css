@@ -1,0 +1,11 @@
+.accordion.accordion-info {
+  width: 70% !important;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 700px) {
+  .accordion.accordion-info {
+    width: 90% !important;
+  }
+}/*# sourceMappingURL=info.css.map */

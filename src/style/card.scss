@@ -1,0 +1,56 @@
+@import './_variables.scss';
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 50px; /* Espacement entre les cartes */
+    width: 90%;
+    margin: 0 auto; /* Centrer horizontalement */
+    padding: 20px;
+    background-color: #f0f0f0; /* Fond gris clair */
+    border-radius: 15px; /* Coins arrondis */
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr; /* 1 colonne en dessous de 700px */
+        gap: 20px; /* Réduit l'espacement entre les cartes */
+    }
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 400px;
+    margin: auto;
+
+    @media (max-width: 700px) {
+        width: 100%; /* Prend toute la largeur de la colonne en dessous de 700px */
+    }
+
+    .card-cover {
+        width: 100%;
+        object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
+        height: 400px;
+
+        @media (max-width: 700px) {
+            height: 250px; /* Réduit la hauteur de l'image sur les écrans plus petits */
+        }
+    }
+
+    .card-title-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+        color: white; /* Texte blanc */
+        text-align: center;
+        padding: 10px;
+
+        .card-title {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import './_variables.scss';
+
+/* src/components/LogementHeader/LogementHeader.css */
+.logementHeader {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+    .logement-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            align-items: first baseline;
+        }
+
+        .logement-info {
+            flex: 1;
+
+            .logement-title {
+                font-size: 24px;
+                color: $orange-color;
+                margin: 0;
+                font-family: $font-family-montserrat;
+            }
+
+            .logement-location {
+                font-size: 16px;
+                color: #000;
+                font-family: $font-family-montserrat;
+            }
+
+            .logement-tags {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+
+                .logement-tag {
+                    background-color: $orange-color;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    font-size: 14px;
+                    font-family: $font-family-montserrat;
+                }
+            }
+            
+        }
+
+        .logement-info-rating{
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: 700px) {
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+
+    .host-info {
+
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .host-name {
+            font-size: 14px;
+            color: $orange-color;
+            width: 30px;
+            font-family: $font-family-montserrat;
+    }
+
+        .host-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+}
+    }
+    .rating {
+        gap: 5px;
+        margin-top: 10px;
+
+        .star {
+            font-size: 20px;
+            color: #d3d3d3;
+        }
+
+
+        .star.filled {
+            color: $orange-color;
+        }
+
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

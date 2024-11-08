@@ -1,0 +1,12 @@
+@import './_variables.scss';
+
+.carrousel-container {
+    width: 90%;
+    margin: auto;
+   
+    
+}
+.equipments-list {
+    list-style-type: none; /* Retire les puces de la liste */
+    padding: 0; /* Enlève les marges internes de la liste si nécessaire */
+}

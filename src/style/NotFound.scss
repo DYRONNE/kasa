@@ -1,0 +1,44 @@
+@import './_variables.scss';
+
+.not-found {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;         
+    text-align: center;      
+}
+
+.not-found-title {
+    font-size: 20rem;   // Taille par défaut du titre
+    color: $orange-color; 
+    font-family: $font-family-montserrat;   
+    margin: 10rem ;
+}
+
+.not-found-text {
+    font-size: 1.5rem;  // Taille par défaut du texte
+    color: #333;
+    font-family: $font-family-montserrat;   
+}
+
+.not-found-link {
+    margin-top: 1rem;
+    font-family: $font-family-montserrat;   
+}
+
+.not-found-link-a {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* Media Query pour les écrans de moins de 800px */
+@media (max-width: 800px) {
+    .not-found-title {
+        font-size: 10rem;   // Réduit la taille du titre à la moitié de sa taille initiale
+    }
+
+    .not-found-text {
+        font-size: 0.75rem;  // Réduit la taille du texte à la moitié de sa taille initiale
+    }
+}
