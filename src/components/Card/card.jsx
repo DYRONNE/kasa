@@ -3,7 +3,6 @@ import '../../style/card.scss';
 import { Link } from 'react-router-dom';
 
 const Card = ({ title, cover, id }) => {
-    console.log('Image URL:', cover);
     return (
         <Link to={`/logement/${id}`}>
             <div className="card">

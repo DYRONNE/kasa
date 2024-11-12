@@ -8,7 +8,7 @@ const LogementHeader = ({ title, location, tags, host, rating }) => {
                 <h1 className="logement-title">{title}</h1>
                 <p className="logement-location">{location}</p>
                 <div className="logement-tags">
-                    {tags.map((tag, index) => (
+                    {tags?.map((tag, index) => (
                         <span key={index} className="logement-tag">{tag}</span>
                     ))}
                 </div>

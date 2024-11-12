@@ -3,11 +3,14 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../style/accordion.scss';
 
-const Accordion = ({ title, content, className }) => {
+const Accordion = ({ title, content, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    
+    const accordionClass = `accordion ${className}`.trim();
+
     return (
-        <div className={`accordion ${className || ''}`}>
+        <div className={accordionClass}>
             <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
                 <h3 className="accordion-title">{title}</h3>
                 <span>

@@ -1,20 +1,70 @@
-.img-carousel {
+/* Carrousel.css */
+@import './_variables.scss';
+
+.carrousel {
+    position: relative;
     width: 100%;
-    height: 900px; /* Hauteur par défaut pour les écrans larges */
-    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la zone sans déformation */
-    border-radius: 10px; /* Ajoute un léger arrondi si souhaité */
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
 
-    /* Media queries pour le responsive */
-    @media (max-width: 1024px) {
-        height: 300px; /* Réduire la hauteur sur les écrans de taille moyenne */
+
+    .carrousel-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+
+        .carrousel-image {
+            width: 100%;
+            height: 500px;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+        }
     }
 
-    @media (max-width: 768px) {
-        height: 250px; /* Hauteur réduite sur les tablettes */
+    .prev {
+        left: 10px;
     }
 
-    @media (max-width: 480px) {
-        height: 200px; /* Hauteur plus petite sur les mobiles */
+    .next {
+        right: 10px;
     }
+
+    button {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .counter {
+        position: relative;
+        text-align: center;
+        bottom: 60px;
+        color: white;
+        font-size: 20px;
+        font-family: "Montserrat";
+    
+    }
+    
 }
 
+
+
+/* Media query pour les écrans de 700px ou moins */
+@media (max-width: 700px) {
+    .carrousel {
+        height: 300px; /* Hauteur réduite pour les petits écrans */
+    }
+}

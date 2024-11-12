@@ -1,5 +1,57 @@
-.img-carousel {
+@charset "UTF-8";
+/* Carrousel.css */
+.carrousel {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 10px; /* Pour arrondir les bords de l'image */
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carrousel .carrousel-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.carrousel .carrousel-images .carrousel-image {
+  width: 100%;
+  height: 500px;
+  transition: transform 0.5s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carrousel .prev {
+  left: 10px;
+}
+.carrousel .next {
+  right: 10px;
+}
+.carrousel button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.carrousel button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carrousel .counter {
+  position: relative;
+  text-align: center;
+  bottom: 60px;
+  color: white;
+  font-size: 20px;
+  font-family: "Montserrat";
+}
+
+/* Media query pour les écrans de 700px ou moins */
+@media (max-width: 700px) {
+  .carrousel {
+    height: 300px; /* Hauteur réduite pour les petits écrans */
+  }
 }/*# sourceMappingURL=carousel.css.map */
