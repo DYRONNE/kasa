@@ -6,20 +6,26 @@ const Carrousel = ({ pictures }) => {
 
     // Fonction pour aller à l'image suivante
     const nextSlide = () => {
-        setCurrentIndex((Index) => (Index + 1) % pictures.length);
+        setCurrentIndex((index) => (index + 1) % pictures.length);
     };
 
     // Fonction pour aller à l'image précédente
     const prevSlide = () => {
-        setCurrentIndex((Index) => (Index - 1 + pictures.length) % pictures.length
-        );
+        setCurrentIndex((index) => (index - 1 + pictures.length) % pictures.length);
     };
 
     return (
         <div className="carrousel">
-            <button className="prev" onClick={prevSlide}>
-                &#10094;
-            </button>
+            {pictures.length > 1 && (
+                <>
+                    <button className="prev" onClick={prevSlide}>
+                        &#10094;
+                    </button>
+                    <button className="next" onClick={nextSlide}>
+                        &#10095;
+                    </button>
+                </>
+            )}
             <div className="carrousel-images">
                 <img
                     src={pictures[currentIndex]}
@@ -27,10 +33,9 @@ const Carrousel = ({ pictures }) => {
                     className="carrousel-image"
                 />
             </div>
-            <button className="next" onClick={nextSlide}>
-                &#10095;
-            </button>
-            <p className='counter'>{currentIndex+1}/{pictures.length}</p>
+            {pictures.length > 1 && (
+                <p className="counter">{currentIndex + 1}/{pictures.length}</p>
+            )}
         </div>
     );
 };
