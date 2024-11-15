@@ -1,4 +1,4 @@
-/* Styles globaux pour garantir que le conteneur principal prenne la pleine hauteur */
+
 html, body {
     height: 100%;
     margin: 0;
@@ -8,12 +8,12 @@ html, body {
 
 /* Conteneur principal pour le contenu de la page */
 .main-content {
-    flex: 1; /* Prend tout l'espace vertical disponible */
+    flex: 1; 
     display: flex;
     flex-direction: column;
 }
 
-/* Styles pour le Footer pour le placer en bas */
+
 footer {
     background-color: black;
     color: white;

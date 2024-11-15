@@ -1,25 +1,32 @@
 .header {
-    background-color: white;
-    padding: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 30px;
-    
+  background-color: white;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
 
-    .header-logo {
-        width: 100px;
-        height: auto;
-      }
+  @media (max-width: 700px) {
+    margin: 0%;;
   }
-  
-  .header .header-nav_link {
+
+  .header-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .header-nav_link {
     text-decoration: none;
     padding-left: 20px;
     font-family: "Montserrat";
     color: black;
     text-align: right;
-  }/*# sourceMappingURL=header.css.map */
+
+    @media (max-width: 700px) {
+      text-transform: uppercase;
+    }
+  }
+}

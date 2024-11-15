@@ -25,6 +25,11 @@
                 color: $orange-color;
                 margin: 0;
                 font-family: $font-family-montserrat;
+                font-weight: 400;
+
+                @media (max-width: 700px) {
+                    font-size: 20px;
+                }
             }
 
             .logement-location {
@@ -37,6 +42,10 @@
                 display: flex;
                 gap: 10px;
                 margin-top: 10px;
+                align-items: center;
+
+                
+
 
                 .logement-tag {
                     background-color: $orange-color;
@@ -45,6 +54,10 @@
                     border-radius: 15px;
                     font-size: 14px;
                     font-family: $font-family-montserrat;
+
+                    @media (max-width: 700px) {
+                        font-size: 10px;
+                    }
                 }
             }
             
@@ -59,6 +72,7 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
+                margin-top: 15px;
             }
         }
     }

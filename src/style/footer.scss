@@ -10,7 +10,9 @@ $main-color-footer: black;
     font-family: 'Montserrat';
     text-align: center;
 
-  
+    @media (max-width: 700px) {
+      padding: 60px ;
+    }
       
   }
   

@@ -1,56 +1,60 @@
 @import './_variables.scss';
-
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 50px; /* Espacement entre les cartes */
-    width: 90%;
-    margin: 0 auto; /* Centrer horizontalement */
-    padding: 20px;
-    background-color: #f0f0f0; /* Fond gris clair */
-    border-radius: 15px; /* Coins arrondis */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 50px;
+    width: 90%; 
+    border-radius: 15px;
+    margin: 0 auto; 
+    padding: 60px 0;
+    background-color: #f0f0f0; 
 
+   
+    @media (max-width: 1500px) {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
+
+    
     @media (max-width: 700px) {
-        grid-template-columns: 1fr; /* 1 colonne en dessous de 700px */
-        gap: 20px; /* Réduit l'espacement entre les cartes */
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+        background-color: transparent;
+        padding-top: 0;
     }
 }
 
 .card {
     position: relative;
     overflow: hidden;
-    border-radius: 15px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    width: 400px;
-    margin: auto;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 83%; 
+    aspect-ratio: 3 / 3; 
+    margin: 0 auto; 
 
     @media (max-width: 700px) {
-        width: 100%; /* Prend toute la largeur de la colonne en dessous de 700px */
+        width: 100%;
+        aspect-ratio: 3 / 2; 
     }
 
     .card-cover {
         width: 100%;
-        object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
-        height: 400px;
-
-        @media (max-width: 700px) {
-            height: 250px; /* Réduit la hauteur de l'image sur les écrans plus petits */
-        }
+        height: 100%;
+        object-fit: cover; 
     }
 
-    .card-title-overlay {
+    .card-title {
+        margin: 0;
+        font-size: 1rem;
+        font-family: $font-family-montserrat;
+        padding: 20px;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-        color: white; /* Texte blanc */
-        text-align: center;
-        padding: 10px;
-
-        .card-title {
-            margin: 0;
-            font-size: 1.2rem;
-        }
+        color: white; 
+        text-align: left;
+        max-width: 100px;
     }
+}
 }

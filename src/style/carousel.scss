@@ -1,70 +1,82 @@
-/* Carrousel.css */
-@import './_variables.scss';
-
 .carrousel {
     position: relative;
-    width: 100%;
-    height: 500px;
+    width: 100%; 
+    height: 600px; 
     margin: 0 auto;
     overflow: hidden;
-
+    border-radius: 15px;
 
     .carrousel-images {
         display: flex;
+        width: 100%;
+        height: 100%; 
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-
 
         .carrousel-image {
+            flex-shrink: 0;
             width: 100%;
-            height: 500px;
+            height: 100%; 
+            object-fit: cover; 
             transition: transform 0.5s ease;
-            object-fit: cover;
         }
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
     }
 
     button {
         position: absolute;
         top: 50%;
-        background-color: rgba(0, 0, 0, 0.5);
+        transform: translateY(-50%);
         color: white;
         border: none;
         padding: 10px;
         cursor: pointer;
-        transform: translateY(-50%);
-        z-index: 1;
+        background: transparent;
+        z-index: 2;
+
+        &:hover {
+            color: #ccc;
+        }
     }
-    
-    button:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+
+    .prev {
+        left: 10px;
+        font-size: 4rem;
+    }
+
+    .next {
+        right: 10px;
+        font-size: 4rem;
     }
 
     .counter {
-        position: relative;
-        text-align: center;
-        bottom: 60px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         color: white;
-        font-size: 20px;
+        font-size: 1rem;
         font-family: "Montserrat";
-    
+        z-index: 2;
     }
-    
 }
 
-
-
-/* Media query pour les écrans de 700px ou moins */
+/* Media queries pour petits écrans */
 @media (max-width: 700px) {
     .carrousel {
-        height: 300px; /* Hauteur réduite pour les petits écrans */
+        height: auto; 
+        aspect-ratio: 16 / 9; 
+    }
+
+    .carrousel-images .carrousel-image {
+        height: auto; 
+        object-fit: contain; 
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+    .counter {
+       display: none;
     }
 }

@@ -4,9 +4,23 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 40px;
+       
+        
+      }
 }
 .accordion {
     width: 40%;
+
+    @media (max-width: 700px) {
+        width: 90%;
+        margin: auto;
+        
+      }
+
     .accordion-header {
         display: flex;
         align-items: center;
